@@ -10,7 +10,7 @@ application = Flask(__name__)
 
 @application.route("/")  
 def root():
-    return jsonify({'message': "Hello world"})
+    return jsonify({'message': "Hello Xsolla"})
 
 @application.route("/categoryPrediction")
 def categoryPrediction():
@@ -19,4 +19,4 @@ def categoryPrediction():
 
 if __name__ == "__main__":
     port = int(os.getenv('PORT', 5000))
-    application.run(debug=True, port=port, host='0.0.0.0', threaded=True)
+    application.run(debug=os.getenv('IS_DEBUG', True), port=port, host='0.0.0.0', threaded=True)
