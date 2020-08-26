@@ -21,4 +21,3 @@ scikit-learn
 googletrans
 langdetect
 nltk
-gunicorn
