@@ -1,1 +1,1 @@
-web: gunicorn --workers=4 app
+web: python app.py
